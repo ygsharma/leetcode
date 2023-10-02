@@ -9,14 +9,12 @@ class Solution {
 
     public void helper(int[] nums, int target, int idx, List<Integer> li, List<List<Integer>> ans) {
 
-        if(idx >= nums.length) {
-            if(target == 0) ans.add(new ArrayList<>(li));
-            return;
-        }
-        if(target < 0) return;
-
         if(target == 0) {
             ans.add(new ArrayList<>(li));
+            return;
+        }
+
+        if(idx == nums.length || target < 0) {
             return;
         }
         
