@@ -3,7 +3,7 @@ class Solution {
         
         int i = 0, j = nums.length-1;
 
-        int missingCount = nums[nums.length - 1] - nums[0] + 1 - nums.length; 
+        int missingCount = nums[j] - nums[0] - j; 
 
         // If kth missing number is beyond the last element of nums
         if (k > missingCount) return nums[nums.length - 1] + k - missingCount;
