@@ -6,7 +6,7 @@ class Solution {
         int missingCount = nums[j] - nums[0] - j; 
 
         // If kth missing number is beyond the last element of nums
-        if (k > missingCount) return nums[nums.length - 1] + k - missingCount;
+        if (k > missingCount) return nums[j] + k - missingCount;
 
         while(i < j) {
             int mid = i + (j-i)/2;
