@@ -9,7 +9,9 @@ class Solution {
             max = Math.max(max, num);
         }
 
-        int[] freq = new int[max-min+1];
+        // size of freq is max-min+1 => to incorporate -ve values in nums
+        // num-min is index for num in freq => represent frequency of num 
+	int[] freq = new int[max-min+1];
 
         for(int num : nums) freq[num-min]++;
 
